@@ -1,0 +1,63 @@
+body{
+	padding: 20px;
+	font-family: "微软雅黑";
+	font-size: 62.5%;
+}
+.main_wrapper{
+	background-color: #eee;
+	border:#999 1px solid;
+	padding: 20px;
+	overflow: auto;
+	min-width: 600px;
+}
+.middle{
+	background-color: #fff;
+	border: 1px solid #999;
+	float: left;
+	width: 100%;
+}
+.content{
+	margin-left: 200px;
+	margin-right: 200px;
+}
+
+
+.left{
+	width: 190px;
+	background-color: #fff;
+	border:1px solid #999;
+	float: left;
+	margin-left: -100%;
+}
+
+.right{
+	width: 190px;
+	background-color: #fff;
+	border: 1px solid #999;
+	float: left;
+	margin-left: -194px;
+}
+.team_logo{
+	float: left;
+}
+.team_name{
+	text-align: center;
+}
+.members_logo{
+	display: block;
+	margin: 10px;
+}
+
+
+/*要求：三列布局，两侧固定宽度，中间宽度自适应，父元素区域高度以最高子元素高度为准,左+中+右*/
+/*三列布局的关键点：
+  1、左右两列设定固定宽度，设置float；
+  2、中间一列宽度不设置，根据左右两列已知宽度设置margin-left和margin-right；
+  3、父元素区域高度以最高子元素高度为准，在具有浮动元素的父容器中设置overflow：auto，这样父容器就会有一个高度存在。
+  4、设置整个外盒子的min-width，可以防止宽度被拉到最小，三列挤在一起。*/
+
+
+/*双飞翼布局 中+左+右  实现中间主要部分优先加载*/
+/*在.col-main下再次添加一个 .main-wrap，使得文字不被左右两部分遮挡，左右边界根据左右的宽度设定*/
+/*浮动左侧，宽度190，左边界-100%，浮动情况下，负边界值会导致DIV上移，使用-100%可以保证移到最左侧*/
+/*左边界-190px，注意负边界一定大于或等于该DIV的宽度，才能靠到上一行去*/
