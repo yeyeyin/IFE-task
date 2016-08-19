@@ -1,0 +1,65 @@
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.main{
+	position: absolute;
+	width: 400px;
+	height: 200px;
+	background-color: #ccc;
+	left:50%;
+	margin-left: -200px;
+	top:50%;
+	margin-top: -100px;
+}
+
+.left-top-area{
+	width: 50px;
+	height: 50px;
+	border-radius: 0 0 50px 0;
+	background-color: #fc0;
+}
+
+.right-bottom-area{
+	width: 50px;
+	height: 50px;
+	border-radius: 50px 0 0 0;
+	background-color: #fc0;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+
+}
+
+/*
+居中：其中margin-left/top根据元素的width/height来确定
+position: absolute;
+left:50%;
+margin-left: -200px;该
+top:50%;
+margin-top: -100px;
+*/
+/*
+半圆：
+border-radius具体值为圆的半径；
+在定位圆的时候，用绝对定位+bottom/top/left/right等
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
