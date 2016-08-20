@@ -1,0 +1,414 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: "黑体";
+  background-color: #ccc;
+}
+
+.main{
+  width: 980px;
+  height: 1386px;
+  margin: 0 auto;/*自动居中*/
+  background-color: #ffffff;
+}
+
+.top{
+  width:892px;
+  height: 61px;
+  font-size:12px;
+  margin: 0 auto;
+  border-bottom: 2px solid #938e8c;/*头部的黑实线*/
+}
+
+.top_bg{
+  background-color: #d45d5c;
+  width: 110px;
+  height: 61px;
+  display: inline-block;/*行内块元素*/
+  /*行内元素不能设置margin，要先转为块级元素*/
+}
+.top_bg span{
+  color: #fff;
+  float: left;
+  margin-top: 45px;
+  margin-left: 4px;
+}
+.top_time{
+  float: right;/*float脱离文档流，生成一个块级元素*/
+  color: #d45d5c;
+  margin-top: 45px;
+}
+
+.middle{
+  margin: 44px;
+}
+.middle_left{
+  position: relative;/*设定relative为的是配合下面的cover-left的position定位*/
+  width: 641px;
+  height: 301px;
+  float: left;/*设置左侧浮动后，文字会自动环绕其周边*/
+}
+.middle_right{
+  float: right;
+  width: 203px;
+}
+/*hr标签 在页面创建一条水平线 */
+.middle_right hr{
+  width: 203px;
+  height: 2px;
+  background-color:#cc8091;
+}
+.About{
+  font-size: 24px;
+  color: #000;
+  font-family: "微软雅黑";
+  line-height: 40px;
+  text-decoration: underline;/*下划线*/
+  text-transform: capitalize;/*大写字母*/
+  font-variant: small-caps;
+  /*必须先转为大写再使用小型大写*/
+  
+}
+.detail{
+  font-size: 12px;
+  color: #676767;
+  font-family: "楷体";
+  line-height: 10px;
+  font-style: oblique;
+}
+
+.seven{
+  font-size: 116px;
+  color: #75b86b;
+  font-family: "微软雅黑";
+  
+  font-style: oblique;
+}
+.num{
+  font-size: 55px;
+  color: #cc8091;
+  font-family: "微软雅黑";
+}
+.text_1{
+  font-size: 21px;
+  color: #cc8091;
+  font-family: "微软雅黑";
+  position: relative;
+  left: 85px;
+  bottom: 50px;
+
+}
+.text_2{
+  font-size: 12px;
+  color: #ccc;
+  font-family: "微软雅黑";
+  position: relative;
+  left: 85px;
+  bottom: 55px;
+}
+.cover_left{
+  width: 191px;
+  height: 301px;
+  background-color: green;
+  opacity: 0.20;
+  position: absolute;
+  top:0;
+  left:0;
+}
+.cover_right{
+  width: 191px;
+  height: 301px;
+  background-color: red;
+  opacity: 0.20;
+  position: absolute;/*注意绝对定位的相对父元素*/
+  top:0;
+  right:0;
+}
+
+/*三列固定宽度，分别设定宽度，float：left*/
+.middle_text{
+  float: left;
+  margin: 44px;
+}
+
+.le{
+  width: 230px;
+  float: left;
+  margin-right: 20px;
+ 
+}
+.what{
+  font-family: "微软雅黑";
+  font-size: 16px;
+  color: #418c59;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;/*光标呈现小手*/
+}
+.le p{
+  font-family: "宋体";
+  font-size: 12px;
+  color: #767777;
+  line-height: 16px;
+  margin-top: 5px;
+}
+.mi{
+  width: 210px;
+  float: left;
+  margin-right: 20px;
+}
+.when{
+  font-family: "微软雅黑";
+  font-size: 16px;
+  color: #d2994f;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;/*光标呈现小手*/
+}
+.mi p{
+  font-family: "微软雅黑";
+  font-size: 12px;
+  color: #767777;
+  line-height: 16px;
+  margin-top: 5px;
+  opacity: 70%;
+}
+.ri{
+  width: 140px;
+  float: left;
+}
+.how{
+  font-family: "微软雅黑";
+  font-size: 16px;
+  color: #cc7680;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;/*光标呈现小手*/
+}
+.ri p{
+  font-family: "微软雅黑";
+  font-size: 12px;
+  color: #767777;
+  line-height: 20px;
+  margin-top: 5px;
+  margin-bottom: 40px;
+}
+ul{
+  list-style: none;/*无列表样式*/
+  font-size: 12px;
+  color: #231851;
+  line-height: 16px;
+  font-family: "微软雅黑";
+  margin-left: 12px;
+
+}
+li{
+  margin-bottom: 5px;
+}
+.ri ul li span{
+  color: #cd4a48;
+  font-style: oblique;
+  opacity: 0.7;
+
+}
+.bottom{
+  float: left;
+  width: 892px;
+  margin: 0 44px 0 44px;
+
+}
+.left{
+  width: 415px;
+  float: left;
+}
+
+.left_up{
+  font-family: "黑体";
+  font-weight: bold;
+  border-bottom: 2px solid #11456b;
+}
+.the{
+  font-size: 72px;
+  color: #f5e327;
+  font-style: oblique;
+}
+.left_up p{
+  font-size: 42px;
+  color: #11456b;
+  line-height: 50px;
+}
+.front_end{
+  font-size: 33px;
+  color: #11456b;
+}
+.left_bottom{
+  padding: 10px 0px;
+  margin-top: 10px;
+  /*position: relative;*/
+}
+.left_bottom p{
+  font-size: 12px;
+  color: #767777;
+  font-family: "宋体";
+  line-height: 16px;
+  text-indent:2em;/*首行缩进*/
+}
+/*first-letter伪类，p元素的第一个字符*/
+.le_text p:first-letter{
+  float: left;
+  font-size: 70px;
+  color: #f5e327;
+  font-family: "微软雅黑";
+  line-height: 70px;
+  margin-right: 5px;
+}
+.le_text p{
+  text-indent: 0;
+  clear:both;
+}
+.right{
+  float: right;
+  width: 458px;
+  height: 637px;
+}
+
+.rim{
+  position: relative;
+}
+.pic_2{
+  float: right;
+  margin: 12px 10px 12px 2px;
+
+}
+
+.rim_text{
+  width: 458px;
+  height: 61px;
+  background-color: #000;
+  opacity: 0.6;
+  position: absolute;
+  bottom: 2px;
+
+}
+.rim_text p{
+  color:#fff;
+  font-size: 26px;
+  font-family: "微软雅黑";
+  line-height:44px;
+  margin-left: 50px;
+  margin-top: 10px;
+  height: 44px;
+  border-left: 3px solid #72b16a;
+  text-indent: 0.5em;
+}
+.rim_text span{
+  font-size: 12px;
+  color: #72b16a;
+  font-style: oblique;
+  line-height: 140%;
+  margin-left: 5px;
+}
+.r_text{
+  width: 459px;
+  height: 318px;
+  background-color: #eeeed6;
+  margin-top:18px;
+  position: relative;
+}
+.r_text_1 ul{
+  list-style-image: url("img/triangle.png");
+}
+.r_text_1 ul li{
+    font-size: 16px;
+  color: #5a5b5b;
+  font-family: "宋体";
+  text-align: left;
+  margin-left: 50px;
+  padding-top: 20px;
+}
+.sp{
+  font-size: 12px;
+  font-family: "宋体";
+  font-style: oblique;
+  text-align: right;
+  line-height: 20px;
+  color: #5a5b5b;
+}
+.r_text_2{
+  width: 260px;
+  height: 160px;
+  background-color: #d55d5c;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  color: #fff;
+}
+.r_text_3{
+  width: 178px;
+  height: 160px;
+  margin-right: 10px;
+  position: absolute;
+  right: 0px;
+  bottom:-25px;
+    font-size: 14px;
+  color: #5a5b5b;
+  font-family: "黑体";
+  font-style: oblique;
+  line-height: 16px;
+  text-indent: 3em;
+}
+.zero{
+  float: left;
+  font-size: 110px;
+  color: #fff;
+  font-family: "微软雅黑";
+  border-right: 2px solid #fff;
+  height: 86px;
+  line-height: 86px;
+  margin: 37px 10px;
+}
+/*当设定float后，旁边的文本框会环绕浮动框，因此.nums无需再设定*/
+.nums{
+  margin-top: 37px;
+  font-size: 21px;
+  font-family: "黑体";
+  font-style: oblique;
+  line-height: 24px;
+}
+.hello{
+  font-size: 12px;
+  font-family: "黑体";
+  line-height: 14px;
+}
+.r_text_3 span{
+  font-size: 72px;
+  color: #d45d5c;
+  font-family: "黑体";
+  line-height: 30px;
+}
+.pu_left{
+  position: absolute;
+  bottom: 120px;
+  right: 150px;
+  font-style: normal;
+}
+.pu_right{
+  position: absolute;
+  bottom: 45px;
+  right: 0px;
+  font-style: normal;
+}
+footer{
+  clear: both;
+  margin: 0 auto;
+  width: 892px;
+  height: 59px;
+  border-top: 1px solid #938e8c;
+}
+footer p{
+  float: right;
+  font: 12px "黑体";
+  color: #d45d5c;
+}
