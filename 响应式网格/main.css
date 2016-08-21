@@ -1,0 +1,97 @@
+html,body{
+	margin: 0;
+	padding: 0;
+}
+
+/*设置box-sizing目的是解决浏览器对于盒子模型的兼容问题*/
+.container{
+	width: 100%;
+
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+	padding:10px;
+}
+
+
+/*让一行中的内容在一行中，不跑到其他行中，所以要清除浮动*/
+.row:before,
+.row:after{
+	content: "";
+	display: block;
+	/*display: table;*/
+	/*尝试二者没有什么不同*/
+	clear:both;
+
+}
+
+/*属性选择器，class属性中包含col-的所有元素*/
+/*给每个块添加基础样式*/
+[class*='col-'] {
+	box-sizing:border-box;
+	float: left;
+	/*设置浮动，当屏幕宽度变窄后，一行无法容下所有的列，则会换行，但不与div row相冲突*/
+	margin: 10px;
+	background-color: #eee;
+	border: 1px solid #999;
+	height: 50px;
+	font-size: 12px;
+	text-align: center;
+	line-height: 50px;
+}
+
+
+
+/*大于768px*/
+
+@media (min-width: 769px) {
+	.col-md-1{
+		width: calc( 8.333% - 20px );
+	}
+	.col-md-2{
+		width: calc( 16.666% - 20px );
+	}
+	.col-md-3{
+		width: calc( 25% - 20px );
+	}
+	.col-md-4{
+		width: calc( 33.333% - 20px );
+	}
+	.col-md-6{
+		width: calc( 50% - 20px );
+	}
+}
+
+/*小于768px*/
+@media (max-width: 768px) {
+	.col-sm-2{
+		width: calc( 16.666% - 20px );
+	}
+	.col-sm-3{
+		width: calc( 25% - 20px );
+	}
+	.col-sm-6{
+		width: calc( 50% - 20px );
+	}
+	.col-sm-8{
+		width: calc( 66.666% - 20px );
+	}
+	.col-sm-12{
+		width: calc( 100% - 20px );
+	}
+}
+
+/*栅格显示关键点：
+
+1、将所有的元素放在一个容器中；
+2、对行进行块级元素设定，并对行与行之间设置清除float，保证相邻两行不干扰；
+3、对列进行基础样式设定，设置float，当媒体查询尺寸较大时，依据md设定的width显示，
+width使用calc动态计算，保证在一定范围内自适应；
+当媒体查询尺寸变小后，一行无法装下所有列，
+就会自动换行显示，且依据sm设定的width，但依然保持在同一个div中，此处换行和row无冲突；
+4、使用calc时，注意列之间的间距问题。
+*/
+
+
+
+
