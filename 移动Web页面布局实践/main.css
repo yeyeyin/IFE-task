@@ -1,0 +1,329 @@
+*{box-sizing:content-box;margin: 0;padding: 0;}
+html{
+    -webkit-font-smoothing:antialiased;
+    /*页面字体抗锯齿*/
+    -webkit-text-size-adjust:none;
+    /*禁用Webkit内核浏览器的文字大小调整功能*/
+    font-family: "Microsoft YaHei";
+    /*font-size: 62.5%;*/
+}
+body{
+    min-width: 310px;
+}
+ul{
+    list-style: none;/*清楚列表样式*/
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+h1,h2,h3,h4,h5,h6{
+    text-align: center;
+}
+
+/*头部分*/
+.header{
+    width: 100%;
+    background-color: #91d4da;
+    color: #ffffff;
+    position: relative;
+    line-height: 2.5rem;
+    text-align: center;
+}
+.header p{
+    position: absolute;
+    font-size: 1rem;
+    font-weight: bold;
+    /*text-align: center;*/
+    margin-left: 0.4rem;
+    /*line-height: 2.5rem;*/
+}
+.header h1{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/*导航部分*/
+nav{
+    /*overflow: hidden;*/
+    width: 100%;
+    line-height: 1.5rem;
+    background-color: #fff;
+    color: #000;
+}
+nav ul li{
+    float: left;/*让列表变水平，则使用float*/
+    width: 20%;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 300;
+}
+nav ul >.active{
+    border-bottom: 0.2rem solid #91d4da;
+}
+
+/*banner*/
+.banner{
+    width: 100%;
+}
+.banner img{
+    width: 100%;
+    display: block;
+}
+/*img是行内元素，若对其设置宽和高，需要转为块级元素*/
+
+
+
+/*section*/
+section{
+    width: 100%;
+    display: block;
+}
+.section{
+    overflow: hidden;
+    margin: 0.5rem;
+}
+.label{
+    padding-bottom: 0.8rem;
+    overflow: hidden;
+    border-bottom: solid 0.15rem #dedede;
+}
+.label ul{
+    /*flex布局容器*/
+    display: flex;
+    flex-flow:row wrap;
+    justify-content:space-around;
+}
+.label ul li{
+    /*li是块级元素*/
+    /*对项目设置宽度*/
+    width: 15%;
+}
+.label ul li img{
+    display: block;
+    width: 100%;
+}
+
+.label ul li span{
+    display: block;
+    font-size: 0.8rem;
+    text-align: center;
+}
+.label ul li a:hover{
+   color: #9d9d9d;
+}
+.label ul li img:hover{
+ opacity: 0.7;
+}
+
+
+
+/* list*/
+.list ul{
+    display: flex;
+    flex-flow:row wrap;
+    justify-content:space-around;
+    padding-top:0.5rem;
+    box-sizing:border-box;
+}
+.list ul li{
+    width: 33.3%;
+}
+.list ul .bk{
+    border-right: 0.1rem solid #dedede;
+    box-sizing:border-box;
+}
+.list ul li img{
+    display: block;
+    width: 70%;
+    margin: 0 auto;/*图片居中*/
+}
+.list ul li h1{
+    font-size: 1rem;
+}
+.list ul li h2{
+    font-size: 0.7rem;
+
+}
+
+/*content*/
+
+
+.content{
+    overflow: hidden;
+    background-color: #f5f5f5;
+}
+/* modul*/
+.modul1{
+    margin-top:0.5rem;
+    background-color: #fff;
+    padding: 0.5rem 0.7rem 0.5rem 0.7rem;
+}
+.modul1 h1{
+    font-size: 0.8rem;
+    text-align: left;
+    font-weight: 400;
+    line-height: 1.5rem;
+    border-bottom: 0.1rem solid #dedede;
+    margin-bottom: 0.1rem;
+}
+.modul1 .modul1-list{
+    padding-top: 0.1rem;
+    position: relative;
+    overflow: hidden;
+}
+.modul1 .modul1-list .modul1-list-img{
+    width:22%;
+    float: left;
+    clear: both;/*清楚两侧浮动的影响*/
+    display: block;
+
+}
+.modul1 .modul1-list .modul1-list-img img{
+    width: 3rem;
+    height: 3rem;
+}
+.modul1 .modul1-list .modul1-list-doc {
+    float: left;
+    width:78%;
+    height: 3rem;
+    overflow: hidden;
+}
+
+.modul1 .modul1-list .modul1-list-doc ul{
+    display: flex;
+    flex-flow:row wrap;
+    justify-content:space-around;
+}
+.modul1 .modul1-list .modul1-list-doc li{
+    width: 4rem;
+    height: 1.2rem;
+    font-size: 0.5rem;
+    text-align: center;
+    margin-top: 0.2rem;
+    background-color: #f5f5f5;
+    border-radius: 0.5rem;
+}
+.modul1-list-doc ul li a span{
+    display: block;
+    margin: auto;
+    line-height: 1.2rem;
+}
+
+/* modul2*/
+.modul2{
+    margin-top: 0.5rem;
+    background-color: #fff;
+    padding:0 0.7rem 0.1rem 0.7rem;
+}
+ .modul2-list{
+    margin-top: 0.1rem;
+    padding: 0.3rem 0;
+    position: relative;
+    height: 3.1rem;
+}
+ .modul2-list .modul2-list-img{
+    width:30%;
+    float: left;
+
+}
+ .modul2-list .modul2-list-img img{
+    display: block;
+    width:100%;
+}
+ .modul2-list .modul2-list-doc{
+    /*overflow: hidden;*/
+    float: left;
+    width: 70%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    height: 3.1rem;
+    position: relative;
+}
+.modul2-list-doc-list{
+    left: 0.5rem;
+    position: absolute;
+    top:0;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #646464;
+}
+.modul2-list-doc-time{
+    left: 0.5rem;
+    color: #9d9d9d;
+    font-weight: 500;
+    position: absolute;
+    bottom:0;
+    font-size: 0.5rem;
+}
+/* modul3*/
+.modul3{
+    margin-top: 0.1rem;
+    background-color: #fff;
+    padding:0 0.7rem 0.1rem 0.7rem;
+}
+/* modul4*/
+.modul4{
+    margin-top: 0.1rem;
+    background-color: #fff;
+    padding:0 0.7rem 0.4rem 0.7rem;
+}
+.modul4-list{
+    margin-top: 0.1rem;
+    padding: 0;
+    position: relative;
+    height: 5.1rem;
+}
+.modul4-list .modul4-list-img{
+    width:30%;
+    float: left;
+    height: 3.1rem;
+
+}
+.modul4-list .modul4-list-img img{
+    display: block;
+    width:100%;
+}
+.modul4-list .modul4-list-doc{
+    overflow: hidden;
+    float: left;
+    width: 70%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    height: 3.1rem;
+    position: relative;
+}
+.modul4-list-doc-list{
+    left: 0.5rem;
+    position: absolute;
+    top:0;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #646464;
+}
+.modul4-list-doc-time{
+    left: 0.5rem;
+    color: #9d9d9d;
+    font-weight: 500;
+    position: absolute;
+    bottom:0;
+    font-size: 0.5rem;
+}
+.modul4-list h1{
+    line-height: 1rem;
+    text-align: left;
+    font-size: 0.5rem;
+}
+.flex{
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: space-between;
+}
+
+
+/*知识点汇总：*/
+/*让列表变水平，则使用float*/
+/*块级元素有哪些*/
+/*注意float设置后造成父元素框高度塌陷的问题*/
